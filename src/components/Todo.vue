@@ -1,6 +1,8 @@
 <template>
     <div>
-        {{key}}
+        <form @submit="submit">
+            <input/>
+        </form>
     </div>
 </template>
 
@@ -10,6 +12,11 @@
         data() {
             return {
                 key: "value"
+            }
+        },
+        methods: {
+            submit(e) {
+                e.preventDefault()
             }
         },
     }
